@@ -71,7 +71,7 @@ body {
   background: #fb7185;
 }
 
-.card {
+.card, .card2{
   width: min(94vw, 540px);
   padding: 30px 24px;
   border-radius: 24px;
@@ -85,19 +85,7 @@ body {
   animation: fadeUp 0.45s ease;
 }
 
-.card2 {
-  width: min(94vw, 540px);
-  padding: 30px 24px;
-  border-radius: 24px;
-  background: linear-gradient(160deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.06));
-  border: 1px solid var(--line);
-  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.38), inset 0 1px 0 rgba(255, 255, 255, 0.28);
-  backdrop-filter: blur(12px);
-  text-align: center;
-  position: relative;
-  z-index: 1;
-  animation: fadeUp 0.45s ease;
-}
+
 
 h1 {
   font-size: clamp(2rem, 6vw, 2.9rem);
@@ -139,7 +127,7 @@ h1 {
   outline-offset: 3px;
 }
 
-.Btn--start {
+.Btn--start, .Btn--start2 {
   background: linear-gradient(135deg, var(--brand1), var(--brand2));
   box-shadow: 0 14px 30px rgba(255, 79, 111, 0.38), inset 0 1px 0 rgba(255, 255, 255, 0.24);
 }
@@ -219,4 +207,10 @@ h1 {
     opacity: 1;
     transform: translateY(0) scale(1);
   }
+}
+
+.right{
+  display: flex;
+  align-items: end;
+  gap: 12px;
 }

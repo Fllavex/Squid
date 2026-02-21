@@ -8,9 +8,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const statusText = document.querySelector("#status");
   const cells = document.querySelectorAll(".cell");
   const subtitle = document.querySelector(".subtitle");
+  
   //друга гра
-
-  const card2 = document.querySelector('.card2')
+  const card2 = document.querySelector('.card2');
+  const showGameBtn2 = document.querySelector('#showGameBtn2')
 
   function TikTokToe(){
 
@@ -30,15 +31,14 @@ document.addEventListener("DOMContentLoaded", () => {
      ];
    
      function startGame() {
-       card2.classList.add("hidden");
        gameSection.classList.remove("hidden");
        showGameBtn.classList.add('hidden');
        subtitle.classList.add("hidden");
+       card2.classList.add('right')
        resetGame();
      }
    
      function backToMenu() {
-       card2.classList.remove("hidden");
        gameSection.classList.add("hidden");
        showGameBtn.classList.remove("hidden");
        subtitle.classList.remove("hidden");
