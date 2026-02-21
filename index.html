@@ -1,21 +1,21 @@
-<!Doctype html>
+<!doctype html>
 <html lang="uk">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
+  <title>Ігри</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main class="page">
-    <section class="card">
+  <main class="page" id="gamesPage">
+    <section class="card game-card" id="card-tictactoe" data-game-card>
       <h1>Хрестики-Нулики</h1>
       <p class="subtitle">Натисни кнопку, щоб почати гру</p>
 
-      <button id="showGameBtn" class="Btn Btn--start">Почати гру</button>
+      <button class="Btn Btn--start" data-open-game>Почати гру</button>
 
-      <section id="gameSection" class="game hidden" aria-live="polite">
-        <p id="status" class="status">Хід: X</p>
+      <section class="game hidden" id="gameSection1" aria-live="polite">
+        <p id="status1" class="status">Хід: X</p>
 
         <div class="board">
           <button class="cell" data-index="0"></button>
@@ -31,25 +31,32 @@
 
         <div class="game-actions">
           <button id="restartBtn" class="Btn Btn--alt">Заново</button>
-          <button id="backMenuBtn" class="Btn Btn--menu">Назад в меню</button>
+          <button class="Btn Btn--menu" data-close-game>Назад в меню</button>
         </div>
       </section>
     </section>
 
-    <section class="card2">
+    <section class="card3 game-card" id="card-third" data-game-card>
       <h1>Гра</h1>
-      <p class="subtitle">натисніть кнопку, шоб почати гру</p>
+      <p class="subtitle">Натисни кнопку, щоб почати гру</p>
 
-      <button id="showGameBtn2" class="Btn Btn--start2">Почати гру</button>
+      <button class="Btn Btn--start3" data-open-game>Почати гру</button>
+    </section>
 
-       <section id="gameSection" class="game hidden" aria-live="polite">
-          <div class="board">
-          </div>
-       </section>
+    <section class="card3 game-card" id="card-third" data-game-card>
+      <h1>Гра</h1>
+      <p class="subtitle">Натисни кнопку, щоб почати гру</p>
+
+      <button class="Btn Btn--start4" data-open-game>Почати гру</button>
+    </section>
+
+    <section class="card4 game-card" id="card-forth" data-game-card>
+      <h1>Гра</h1>
+      <p class="subtitle">Натисни кнопку, щоб почати гру</p>
+
+      <button class="Btn Btn--start4" data-open-game>Почати гру</button>
     </section>
   </main>
-
-
 
   <script src="script.js"></script>
 </body>
