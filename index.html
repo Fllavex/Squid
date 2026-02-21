@@ -1,12 +1,57 @@
-<!DOCTYPE html>
-<html lang="en">
+<!Doctype html>
+<html lang="uk">
 <head>
-    <link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Хрестики-Нулики</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <script src="script.js"></script>
+  <main class="page">
+    <section class="card">
+      <h1>Хрестики-Нулики</h1>
+      <p class="subtitle">Натисни кнопку, щоб почати гру</p>
+
+      <button id="showGameBtn" class="Btn Btn--start">Почати гру</button>
+
+      <section id="gameSection" class="game hidden" aria-live="polite">
+        <p id="status" class="status">Хід: X</p>
+
+        <div class="board">
+          <button class="cell" data-index="0"></button>
+          <button class="cell" data-index="1"></button>
+          <button class="cell" data-index="2"></button>
+          <button class="cell" data-index="3"></button>
+          <button class="cell" data-index="4"></button>
+          <button class="cell" data-index="5"></button>
+          <button class="cell" data-index="6"></button>
+          <button class="cell" data-index="7"></button>
+          <button class="cell" data-index="8"></button>
+        </div>
+
+        <div class="game-actions">
+          <button id="restartBtn" class="Btn Btn--alt">Заново</button>
+          <button id="backMenuBtn" class="Btn Btn--menu">Назад в меню</button>
+        </div>
+      </section>
+    </section>
+
+    <section class="card2">
+      <h1>Гра</h1>
+      <p class="subtitle">натисніть кнопку, шоб почати гру</p>
+
+      <button id="showGameBtn" class="Btn Btn--start">Почати гру</button>
+
+       <section id="gameSection" class="game hidden" aria-live="polite">
+          <div class="board">
+            
+          </div>
+       </section>
+    </section>
+  </main>
+
+
+
+  <script src="script.js"></script>
 </body>
 </html>
