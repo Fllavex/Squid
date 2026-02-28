@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ігри</title>
   <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="maze.css">
 </head>
 <body>
   <main class="page" id="gamesPage">
@@ -35,29 +36,52 @@
         </div>
       </section>
     </section>
+      <div class="card" id="game-card">
+    <div id="overlay">
+        <h1 id="overlay-title">NEON MAZE</h1>
+        
+        <div id="step-start" class="btn-group">
+            <button class="Btn Btn--start" onclick="goToStep('nickname')">ПОЧАТИ ГРУ</button>
+        </div>
 
-    <section class="card3 game-card" id="card-third" data-game-card>
-      <h1>Гра</h1>
-      <p class="subtitle">Натисни кнопку, щоб почати гру</p>
+        <div id="step-nickname" class="btn-group hidden">
+            <input type="text" id="nick-input" class="input-field" placeholder="Введіть нік..." maxlength="12">
+            <button class="Btn Btn--start" onclick="goToStep('difficulty')">ДАЛІ</button>
+        </div>
 
-      <button class="Btn Btn--start3" data-open-game>Почати гру</button>
-    </section>
+        <div id="step-difficulty" class="btn-group hidden">
+            <button class="Btn Btn--diff" onclick="setDifficulty('easy')">Легкий</button>
+            <button class="Btn Btn--diff" onclick="setDifficulty('normal')">Нормальний</button>
+            <button class="Btn Btn--diff" onclick="setDifficulty('hard')">Складний</button>
+        </div>
 
-    <section class="card3 game-card" id="card-third" data-game-card>
-      <h1>Гра</h1>
-      <p class="subtitle">Натисни кнопку, щоб почати гру</p>
+        <div id="death-content" class="btn-group hidden">
+            <h2 style="color: var(--brand2); margin-bottom: 10px; font-weight: 800;">ГРА ЗАКІНЧЕНА</h2>
+            <div id="save-status" style="font-size: 0.8rem; margin-bottom: 10px; color: var(--muted);"></div>
+            <button class="Btn Btn--start" onclick="resetToMenu()">В головне меню</button>
+        </div>
+    </div>
 
-      <button class="Btn Btn--start4" data-open-game>Почати гру</button>
-    </section>
+    <div class="stats">
+        <div><span id="player-nick-ui" class="nickname-display"></span> LVL: <span id="level-val">1</span></div>
+        <div class="lives" id="lives-display">❤️❤️❤️</div>
+        <div>КРОКИ: <span id="steps-val">0</span></div>
+    </div>
 
-    <section class="card4 game-card" id="card-forth" data-game-card>
-      <h1>Гра</h1>
-      <p class="subtitle">Натисни кнопку, щоб почати гру</p>
+    <div id="maze-container"></div>
 
-      <button class="Btn Btn--start4" data-open-game>Почати гру</button>
-    </section>
+    <div class="controls-grid">
+        <div></div><button class="Btn Btn--diff ctrl-btn" onclick="handleMove(0, -1)">▲</button><div></div>
+        <button class="Btn Btn--diff ctrl-btn" onclick="handleMove(-1, 0)">◀</button>
+        <button class="Btn Btn--diff ctrl-btn" onclick="handleMove(0, 1)">▼</button>
+        <button class="Btn Btn--diff ctrl-btn" onclick="handleMove(1, 0)">▶</button>
+    </div>
+</div>
+     
   </main>
 
+  <script type="module" src="maze.js"></script>
   <script src="script.js"></script>
+
 </body>
 </html>

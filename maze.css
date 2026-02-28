@@ -18,17 +18,7 @@
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-body {
-    min-height: 100vh;
-    font-family: "Sora", sans-serif;
-    color: var(--text);
-    background: radial-gradient(850px 500px at 8% 8%, #244e7e 0%, transparent 55%),
-                linear-gradient(135deg, var(--bg0), var(--bg1) 55%, var(--bg2));
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 
 .card {
     width: min(94vw, 550px);
