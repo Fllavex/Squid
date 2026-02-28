@@ -9,11 +9,11 @@
 </head>
 <body>
   <main class="page" id="gamesPage">
-    <section class="card game-card" id="card-tictactoe" data-game-card>
+    <section class="card game-card height" id="card-tictactoe" data-game-card>
       <h1>Хрестики-Нулики</h1>
       <p class="subtitle">Натисни кнопку, щоб почати гру</p>
 
-      <button class="Btn Btn--start" data-open-game>Почати гру</button>
+      <button class="Btn Btn--start" id="heightBtn" data-open-game>Почати гру</button>
 
       <section class="game hidden" id="gameSection1" aria-live="polite">
         <p id="status1" class="status">Хід: X</p>
@@ -37,9 +37,10 @@
       </section>
     </section>
       <div class="card" id="game-card">
-    <div id="overlay">
+    <div id="overlay" class="height">
         <h1 id="overlay-title">NEON MAZE</h1>
         
+        <p class="subtitle">Натисни кнопку, щоб почати гру</p>
         <div id="step-start" class="btn-group">
             <button class="Btn Btn--start" onclick="goToStep('nickname')">ПОЧАТИ ГРУ</button>
         </div>

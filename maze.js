@@ -81,6 +81,8 @@ const livesDisplay = document.getElementById('lives-display');
 const playerNickUI = document.getElementById('player-nick-ui');
 const overlay = document.getElementById('overlay');
 
+  
+
 const stepsDivs = {
     start: document.getElementById('step-start'),
     nickname: document.getElementById('step-nickname'),

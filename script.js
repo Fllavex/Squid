@@ -12,6 +12,12 @@ document.addEventListener("DOMContentLoaded", () => {
   let board = Array(9).fill("");
   let currentPlayer = "X";
   let gameActive = false;
+  const height = document.querySelector(".height");
+  const heightBtn = document.querySelector("#heightBtn");
+  heightBtn.onclick = function() {
+  height.classList.remove("height");
+  }
+
 
   const wins = [
     [0, 1, 2],
@@ -43,6 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
     gameSection?.classList.remove("hidden");
     showGameBtn?.classList.add("hidden");
     subtitle?.classList.add("hidden");
+
     resetGame();
   }
 
@@ -52,6 +59,8 @@ document.addEventListener("DOMContentLoaded", () => {
     gameSection?.classList.add("hidden");
     showGameBtn?.classList.remove("hidden");
     subtitle?.classList.remove("hidden");
+    height.classList.add("height");
+
     resetGame();
   }
 
