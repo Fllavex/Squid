@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEON MAZE ONLINE</title>
+
+    <link rel="stylesheet" href="maze.css">
+</head>
+<body>
+
+<div class="card" id="game-card">
+    <div id="overlay">
+        <h1 id="overlay-title">NEON MAZE</h1>
+        
+        <div id="step-start" class="btn-group">
+            <button class="Btn Btn--start" onclick="goToStep('nickname')">ПОЧАТИ ГРУ</button>
+        </div>
+
+        <div id="step-nickname" class="btn-group hidden">
+            <input type="text" id="nick-input" class="input-field" placeholder="Введіть нік..." maxlength="12">
+            <button class="Btn Btn--start" onclick="goToStep('difficulty')">ДАЛІ</button>
+        </div>
+
+        <div id="step-difficulty" class="btn-group hidden">
+            <button class="Btn Btn--diff" onclick="setDifficulty('easy')">Легкий</button>
+            <button class="Btn Btn--diff" onclick="setDifficulty('normal')">Нормальний</button>
+            <button class="Btn Btn--diff" onclick="setDifficulty('hard')">Складний</button>
+        </div>
+
+        <div id="death-content" class="btn-group hidden">
+            <h2 style="color: var(--brand2); margin-bottom: 10px; font-weight: 800;">ГРА ЗАКІНЧЕНА</h2>
+            <div id="save-status" style="font-size: 0.8rem; margin-bottom: 10px; color: var(--muted);"></div>
+            <button class="Btn Btn--start" onclick="resetToMenu()">В головне меню</button>
+        </div>
+    </div>
+
+    <div class="stats">
+        <div><span id="player-nick-ui" class="nickname-display"></span> LVL: <span id="level-val">1</span></div>
+        <div class="lives" id="lives-display">❤️❤️❤️</div>
+        <div>КРОКИ: <span id="steps-val">0</span></div>
+    </div>
+
+    <div id="maze-container"></div>
+
+    <div class="controls-grid">
+        <div></div><button class="Btn Btn--diff ctrl-btn" onclick="handleMove(0, -1)">▲</button><div></div>
+        <button class="Btn Btn--diff ctrl-btn" onclick="handleMove(-1, 0)">◀</button>
+        <button class="Btn Btn--diff ctrl-btn" onclick="handleMove(0, 1)">▼</button>
+        <button class="Btn Btn--diff ctrl-btn" onclick="handleMove(1, 0)">▶</button>
+    </div>
+</div>
+
+
+<script type="module" src="maze.js"></script>
+</body>
+</html>
