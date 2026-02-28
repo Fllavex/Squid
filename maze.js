@@ -246,3 +246,4 @@ window.addEventListener('keydown', (e) => {
     if(k === 'a' || k === 'arrowleft') handleMove(-1, 0);
     if(k === 'd' || k === 'arrowright') handleMove(1, 0);
 });
+
