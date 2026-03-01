@@ -113,6 +113,11 @@ window.goToStep = (step) => {
 
 window.resetToMenu = () => {
     window.goToStep('start');
+    overlay.classList.add('height');
+    document.getElementById('game').classList.add('hidden');
+    document.getElementById('game-card').classList.add('height');
+    container.classList.add('hidden');
+
 };
 
 window.setDifficulty = (diff) => {
@@ -124,6 +129,10 @@ function startGame() {
     overlay.classList.add('hidden');
     state.level = 1;
     loadLevel();
+    document.getElementById('game-card').classList.remove('height');
+    overlay.classList.remove('height');
+    document.getElementById('game').classList.remove('hidden');
+    container.classList.remove('hidden');
 }
 
 function loadLevel() {
@@ -211,8 +220,10 @@ function hitTrap() {
 
 async function endGame() {
     overlay.classList.remove('hidden');
+    overlay.classList.remove('height');
     window.goToStep('death');
     document.getElementById('save-status').innerText = "Збереження результату...";
+    
 
     if (!firebaseReady || !db) {
         document.getElementById('save-status').innerText = "Firebase недоступний, результат локально не зберігається.";
@@ -249,3 +260,7 @@ window.addEventListener('keydown', (e) => {
     if(k === 'd' || k === 'arrowright') handleMove(1, 0);
 });
 
+const resetBtn = document.querySelector('.reset');
+resetBtn.onclick = function() {
+    loadLevel()
+}

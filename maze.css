@@ -163,3 +163,30 @@ h1 {
     height: 300px;
     border: 1px solid var(--line);
 }
+
+.reset{
+    top: 10px;
+    right: 10px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 8px;
+    font-size: 0.9rem;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+     border: none;
+    border-radius: 14px;
+    padding: 12px;
+    font-weight: 800;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+.reset:hover {
+    background: linear-gradient(160deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.06));
+    transition: 0.3s  ;
+}
